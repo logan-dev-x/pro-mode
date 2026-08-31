@@ -9,3 +9,9 @@
 #
 # We recommend using the bang functions (`insert!`, `update!`
 # and so on) as they will fail if something goes wrong.
+
+alias ProMode.Repo
+alias ProMode.Accounts.Role
+
+Repo.insert!(%Role{name: "USER"}, on_conflict: :nothing)
+Repo.insert!(%Role{name: "ADMIN"}, on_conflict: :nothing)
