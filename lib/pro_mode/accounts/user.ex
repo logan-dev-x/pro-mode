@@ -13,7 +13,7 @@ defmodule ProMode.Accounts.User do
 
   def changeset(user, attrs) do
     user
-    |> cast(attrs, [:name, :lastname, :telegram_id])
+    |> cast(attrs, [:name, :lastname, :telegram_id, :role_id])
     |> validate_required([:name, :telegram_id])
     |> unique_constraint(:telegram_id)
   end
